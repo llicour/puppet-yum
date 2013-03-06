@@ -1,0 +1,13 @@
+[custom-noarch]
+name=Custom noarch
+baseurl=http://www.kermit.fr/custom/el<%= operatingsystemrelease.split(".")[0] %>/noarch/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-lcoilliot
+#gpgkey=http://www.kermit.fr/stuff/gpg/RPM-GPG-KEY-lcoilliot
+
+[custom-<%= architecture %>]
+name=Custom <%= architecture %>
+baseurl=http://www.kermit.fr/custom/el<%= operatingsystemrelease.split(".")[0] %>/<%= architecture %>/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-lcoilliot
+#gpgkey=http://www.kermit.fr/stuff/gpg/RPM-GPG-KEY-lcoilliot

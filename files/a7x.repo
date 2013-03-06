@@ -1,0 +1,4 @@
+[a7x]
+name=Automatix         
+baseurl=http://www.kermit.fr/a7x/el$releasever/$basearch/
+gpgcheck=1
