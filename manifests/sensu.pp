@@ -1,7 +1,7 @@
 # Provide sensu yum repos
 
 class yum::sensu (
-    $repo_sensu = hiera( 'yum::sensu::server',
+    $repo_sensu = hiera( 'yum::sensu::repo_sensu',
     'http://repos.sensuapp.org/yum/el/$release/$arch',) {
 
     include yum
