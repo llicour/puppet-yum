@@ -4,7 +4,7 @@ class yum::a7x (
     $repo_a7x = 'http://www.kermit.fr/a7x/el$releasever/$basearch/',) {
 
     include yum
-    include yum::lcoilliot
+    include yum::gpg_misc
 
     yumrepo { 'a7x' :
         baseurl  => $repo_a7X

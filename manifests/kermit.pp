@@ -1,12 +1,14 @@
 # Provide kermit yum repos
 
 class yum::kermit (
-    $repo_kermit_custom    = 'http://www.kermit.fr/repo/rpm/el$releasever/$basearch/custom/',
-    $repo_kermit_thirdpart = 'http://www.kermit.fr/repo/rpm/el$releasever/$basearch/thirdpart/',
+    $repo_kermit_custom    =
+      'http://www.kermit.fr/repo/rpm/el$releasever/$basearch/custom/',
+    $repo_kermit_thirdpart =
+      'http://www.kermit.fr/repo/rpm/el$releasever/$basearch/thirdpart/',
     ) {
 
     include yum
-    include yum::lcoilliot
+    include yum::gpg_misc
 
     yumrepo { 'kermit-custom' :
         baseurl  => $repo_kermit_custom,

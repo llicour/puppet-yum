@@ -1,8 +1,10 @@
 # Provide puppetlabs yum repos
 
 class yum::puppetlabs (
-    $repo_puppetlabs_products = 'http://yum.puppetlabs.com/el/$releasever/products/$basearch',
-    $repo_puppetlabs_deps     = 'http://yum.puppetlabs.com/el/$releasever/dependencies/$basearch',
+    $repo_puppetlabs_products =
+      'http://yum.puppetlabs.com/el/$releasever/products/$basearch',
+    $repo_puppetlabs_deps     =
+      'http://yum.puppetlabs.com/el/$releasever/dependencies/$basearch',
     ) {
 
     include yum

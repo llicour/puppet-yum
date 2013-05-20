@@ -6,7 +6,7 @@ class yum::custom (
     ,) {
 
     include yum
-    include yum::lcoilliot
+    include yum::gpg_misc
 
     yumrepo { 'custom-noarch' :
         baseurl  => $repo_custom_noarch,

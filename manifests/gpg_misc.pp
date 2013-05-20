@@ -1,6 +1,7 @@
-# GPG key of Louis Coilliot, used to sign some custom packages
+# Misc. GPG keys used to sign some custom packages provided in
+# other modules
 
-class yum::lcoilliot {
+class yum::gpg_misc {
 
     file { 'RPM-GPG-KEY-lcoilliot' :
         ensure  => present,
