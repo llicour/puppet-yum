@@ -1,9 +1,9 @@
 # Provide puppetlabs yum repos
 
 class yum::puppetlabs (
-   $repo_puppetlabs_products = 'http://yum.puppetlabs.com/el/$releasever/products/$basearch',
-   $repo_puppetlabs_deps     = 'http://yum.puppetlabs.com/el/$releasever/dependencies/$basearch',
-) {
+    $repo_puppetlabs_products = 'http://yum.puppetlabs.com/el/$releasever/products/$basearch',
+    $repo_puppetlabs_deps     = 'http://yum.puppetlabs.com/el/$releasever/dependencies/$basearch',
+    ) {
 
     include yum
 
@@ -23,13 +23,13 @@ class yum::puppetlabs (
         gpgkey   => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs',
     }
 
-    file { "RPM-GPG-KEY-puppetlabs" :
+    file { 'RPM-GPG-KEY-puppetlabs' :
         ensure  => present,
-        path    => "/etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs",
+        path    => '/etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs',
         owner   => 'root',
         group   => 'root',
         mode    => '0644',
-        source  => "puppet:///modules/yum/RPM-GPG-KEY-puppetlabs",
+        source  => 'puppet:///modules/yum/RPM-GPG-KEY-puppetlabs',
         require => File[ '/etc/pki/rpm-gpg' ],
     }
 

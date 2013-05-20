@@ -1,8 +1,7 @@
 # Provide a7x yum repos
 
 class yum::a7x (
-   $repo_a7x = 'http://www.kermit.fr/a7x/el$releasever/$basearch/',
-) {
+    $repo_a7x = 'http://www.kermit.fr/a7x/el$releasever/$basearch/',) {
 
     include yum
     include yum::lcoilliot

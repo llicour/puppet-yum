@@ -1,3 +1,5 @@
+# GPG key of Louis Coilliot, used to sign some custom packages
+
 class yum::lcoilliot {
 
     file { 'RPM-GPG-KEY-lcoilliot' :
