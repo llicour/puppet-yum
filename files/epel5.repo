@@ -5,4 +5,4 @@ mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=epel-5&arch=$basearc
 failovermethod=priority
 enabled=1
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-5
